@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Resume Analyser Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-white text-black min-h-screen flex items-center justify-center">
+  <div class="w-full max-w-2xl p-8 bg-white shadow-lg rounded-lg">
+    <!-- Top bar with close icon and title -->
+    <div class="flex items-center justify-center relative mb-6">
+      <button aria-label="Close" class="absolute left-0">
+        <i class="fas fa-times text-xl"></i>
+      </button>
+      <h1 class="font-semibold text-lg">Log in or sign up</h1>
+    </div>
+
+    <!-- Welcome heading -->
+    <h2 class="text-3xl font-semibold mb-6 text-center">Welcome to Resume Analyser</h2>
+
+    <!-- Form -->
+    <form action="https://ayushprasad13.github.io/resumeAnalyser-Demo/" onsubmit="return showLoginAlert()">
+      <label class="block mb-1 text-gray-500 text-sm" for="country">Country/Region</label>
+      <select class="w-full border border-gray-300 rounded-md px-4 py-3 mb-4 text-base focus:outline-none focus:ring-2 focus:ring-pink-600" id="country" name="country">
+        <option>India (+91)</option>
+      </select>
+      <input class="w-full border border-gray-300 rounded-md px-4 py-3 mb-2 text-base focus:outline-none focus:ring-2 focus:ring-pink-600" id="phone" name="phone" placeholder="Phone number" type="tel" required />
+      <p class="text-xs text-gray-700 mb-6">
+        We’ll call or text you to confirm your number. Standard message and data rates apply.
+        <a class="font-semibold underline" href="#">Privacy Policy</a>
+      </p>
+      <button class="w-full bg-gradient-to-r from-pink-600 to-pink-500 text-white font-semibold py-3 rounded-md mb-6" type="submit">
+        Continue
+      </button>
+    </form>
+
+    <!-- Divider with "or" -->
+    <div class="flex items-center mb-6">
+      <hr class="flex-grow border-t border-gray-300"/>
+      <span class="mx-3 text-sm text-gray-600">or</span>
+      <hr class="flex-grow border-t border-gray-300"/>
+    </div>
+
+    <!-- Social login buttons -->
+    <button onclick="showLoginAlert(); window.location.href='https://ayushprasad13.github.io/resumeAnalyser-Demo/'" class="w-full border border-gray-400 rounded-md py-3 mb-4 flex items-center justify-center gap-3 text-black font-semibold text-base">
+      <img alt="Facebook logo" class="w-6 h-6" src="https://storage.googleapis.com/a1aa/image/7ce37911-7874-42ce-1eba-ddd2d46b69c8.jpg"/>
+      Continue with Facebook
+    </button>
+
+    <button onclick="showLoginAlert(); window.location.href='https://ayushprasad13.github.io/resumeAnalyser-Demo/'" class="w-full border border-gray-400 rounded-md py-3 mb-4 flex items-center justify-center gap-3 text-black font-semibold text-base">
+      <img alt="Google logo" class="w-6 h-6" src="https://storage.googleapis.com/a1aa/image/ea967873-4a69-4ed2-604b-fa91ccb5a6ae.jpg"/>
+      Continue with Google
+    </button>
+
+    <button onclick="showLoginAlert(); window.location.href='https://ayushprasad13.github.io/resumeAnalyser-Demo/'" class="w-full border border-gray-400 rounded-md py-3 mb-4 flex items-center justify-center gap-3 text-black font-semibold text-base">
+      <img alt="Apple logo" class="w-6 h-6" src="https://storage.googleapis.com/a1aa/image/48a97947-91df-4a66-02ec-ab857e2ef9ef.jpg"/>
+      Continue with Apple
+    </button>
+
+    <button onclick="showLoginAlert(); window.location.href='https://ayushprasad13.github.io/resumeAnalyser-Demo/'" class="w-full border border-gray-400 rounded-md py-3 flex items-center justify-center gap-3 text-black font-semibold text-base">
+      <img alt="Email icon" class="w-6 h-6" src="https://storage.googleapis.com/a1aa/image/b6d3556d-9ea1-4dee-5147-db68b4c96ea4.jpg"/>
+      Continue with email
+    </button>
+  </div>
+
+  <!-- JavaScript Alert -->
+  <script>
+    function showLoginAlert() {
+      alert("Logging in to Resume Analyser...");
+      return true;
+    }
+  </script>
+</body>
+</html>
